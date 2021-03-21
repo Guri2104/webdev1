@@ -57,7 +57,7 @@ function Quiz(questionFactory) {
     /**
      * @returns {Boolean} true if there is at least 1 question else false
      */
-    this.loadQuestions = () => { 
+    this.loadQuestions = (page) => { 
 
     // const storedQuiz = localStorage.getItem(LOCAL_STORAGE_KEY);
         let storedQuiz = null; 
@@ -71,10 +71,22 @@ function Quiz(questionFactory) {
                 storedQuiz = JSON.parse(xhttp.responseText)
                 console.log(storedQuiz)
                 if (storedQuiz === null){
+                    if(page === "student"){
+                        const errDiv = document.getElementById(ERROR_MSG_DIV_ID);
+                        errDiv.classList = SHOW_DIV_CLASSNAME;
+                        const controlDiv = document.getElementById(CONTROL_DIV_ID);
+                        controlDiv.classList = HIDE_DIV_CLASSNAME;
+                    }
                     return false;
                 }
                 this.questions = storedQuiz;
                 if (this.questions.length === 0) {
+                    if(page === "student"){
+                        const errDiv = document.getElementById(ERROR_MSG_DIV_ID);
+                        errDiv.classList = SHOW_DIV_CLASSNAME;
+                        const controlDiv = document.getElementById(CONTROL_DIV_ID);
+                        controlDiv.classList = HIDE_DIV_CLASSNAME;
+                    }
                     return false;
                 } 
                 initial_len = this.questions.length
@@ -99,7 +111,7 @@ function Quiz(questionFactory) {
                 this.questionNodes[i].markIncorrect();
             }
         });
-        return correctCount;
+        return "" + correctCount + "/" + this.questions.length;
     }
 
     this.deleteLast = () => {

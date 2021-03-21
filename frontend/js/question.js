@@ -49,7 +49,7 @@ function QuestionHTML(question, parentNode, renderFunc, quizLen = 0) {
         var updateButton = document.createElement("button");
         addButton.innerHTML = "save";
         updateButton.innerHTML = "update";
-
+        updateButton.classList.add("updatebtn");
         this.addButton = addButton;
         this.updateButton = updateButton;
 

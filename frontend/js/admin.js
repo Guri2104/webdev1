@@ -50,7 +50,7 @@ function getQuestionFactory() {
 
 function loadQuiz() {
     const quiz = new Quiz(getQuestionFactory());
-    quiz.loadQuestions();
+    quiz.loadQuestions("admin");
     document.getElementById(QUIZ_ANCHOR_DIV_ID).appendChild(quiz.rootNode);
     return quiz;
 }

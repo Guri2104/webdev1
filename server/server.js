@@ -4,8 +4,8 @@ const mysql = require('mysql');
 
 const dbCredentials  = mydbCredentials = {
     host: "localhost",
-    user: "webdev_asn",
-    password: "bad_password",
+    user: "webdev_asn",//webdev_asn
+    password: "bad_password",//bad_password
     database: "webdev",
     insecureAuth: true
 };
@@ -150,27 +150,35 @@ function getQuestions(response) {
             }
 
             console.log(typeof(result));
+            let i = 0;
+            let len = result.length;
             result.forEach(question => {
+                
                 db.query(`select * from Choices\nwhere QuestionId = ${question.id}`, (err, choices_arr) => {
                     if (err) {
                         throw err;
                     }
+                    i++;
                     question.choices = [];
                     choices_arr.forEach(choice => {
                         question.choices.push(choice.Description);
                     });
-                    console.log(question);
+                    // console.log(question);
+                    if(i === len){
+                        console.log("result: " + JSON.stringify(result))
+                        response.writeHead(200, {
+                            "Content-Type": "application/json;charset=utf-8",
+                            "Access-Control-Allow-Origin": "*",
+                            "Access-Control-Allow-Methods": "*"
+                          });
+                        response.end(JSON.stringify(result))
+                    }
                 });
                 
             })
             console.log(result);
             db.end();
-            response.writeHead(200, {
-                "Content-Type": "application/json;charset=utf-8",
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "*"
-              });
-            response.end(JSON.stringify(result))
+            
         });
 
     });
