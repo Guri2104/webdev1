@@ -98,7 +98,7 @@ function QuestionHTML(question, parentNode, renderFunc, quizLen = 0) {
             this.parentNode.replaceChild(this.updateButton, this.addButton);   
         console.log(this.question)
         const xhttp = new XMLHttpRequest();
-        const endPointRoot = "http://localhost:4000/";
+        const endPointRoot = "https://gurdensingh.live/webdev1/server/";
         let params = JSON.stringify(this.question);
         let put_query = "?_method=PUT";
         let resource = "quiz";

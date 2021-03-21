@@ -62,7 +62,7 @@ function Quiz(questionFactory) {
     // const storedQuiz = localStorage.getItem(LOCAL_STORAGE_KEY);
         let storedQuiz = null; 
         const xhttp = new XMLHttpRequest();
-        const endPointRoot = "http://localhost:4000/quiz";
+        const endPointRoot = "https://gurdensingh.live/webdev1/server/quiz";
         xhttp.open('GET', endPointRoot, true);
         xhttp.send();
         xhttp.onreadystatechange = () => {
