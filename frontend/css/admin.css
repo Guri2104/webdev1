@@ -1,0 +1,35 @@
+#add_btn {
+    margin-top: 1cm;
+    background-color: rgb(116,181,102);
+    color: white;
+    border: 0cm;
+}
+
+#save_btn {
+    margin-top: 1cm;
+    background-color: rgb(47,126,246);
+    color: white;
+    border: 0cm;
+}
+
+#delete_btn {
+    margin-top: 1cm;
+    background-color: rgb(203,68,74);
+    color: white;
+    border: 0cm;
+}
+
+.question_description {
+    margin-left: 22pt;
+    margin-bottom: 25pt;
+    border-width: 2px;
+}
+
+textarea {
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+}
+
+
+

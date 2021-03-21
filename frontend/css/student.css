@@ -1,0 +1,36 @@
+.correct {
+    background-color:rgba(116,181,102,0.5);
+}
+
+.incorrect {
+    background-color: rgba(203,68,74,0.5);
+}
+
+#error_msg {
+    display: none;
+}
+
+#marks_div {
+    font-weight: bold;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none;
+}
+
+#submit_btn {
+    margin-top: 1cm;
+    background-color: rgb(116,181,102);
+    border: 0cm;
+}
+
+.question_description {
+    margin-left: 12pt;
+    margin-bottom: 15pt;
+    font-weight: bold
+}
+

@@ -1,0 +1,155 @@
+#quiz_root_div {
+    width: 30vw;
+}
+
+#back_btn {
+    margin-top: 1cm;
+    background-color: rgb(236, 233, 19);
+    border: 0cm;
+}
+
+button {
+	padding: 5pt;
+	width: 50pt;
+	border-radius: 12px;
+	margin-right: 10px;
+}
+
+input {
+    margin-right: 10pt;
+}
+
+h2 {
+    margin-top: 50pt; 
+}
+
+#heading {
+    text-align: center;
+    margin-top: 15pt;
+}
+
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
+
+html, body, div, h1, p, img, section{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;}
+
+body {
+    padding-top: 1%;
+    padding-left: 3%;
+	line-height: 1;
+	-webkit-text-size-adjust: none;
+}
+
+
+
+
+/* Basic */
+
+	@-ms-viewport {
+		width: device-width;
+	}
+
+	@media screen and (max-width: 480px) {
+
+		html, body {
+			min-width: 320px;
+		}
+
+	}
+
+	html {
+		box-sizing: border-box;
+	}
+
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+
+	body {
+		background: #ffffff;
+	}
+
+		
+/* Type */
+
+	html {
+		font-size: 18pt;
+	}
+
+		@media screen and (max-width: 1680px) {
+
+			html {
+				font-size: 14pt;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			html {
+				font-size: 12pt;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			html {
+				font-size: 11pt;
+			}
+
+		}
+
+		@media screen and (max-width: 360px) {
+
+			html {
+				font-size: 10pt;
+			}
+
+		}
+
+	body {
+		background-color: #ffffff;
+		color: #000000;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.65;
+	}
+
+	a {
+		-moz-transition: color 0.2s ease-in-out;
+		-webkit-transition: color 0.2s ease-in-out;
+		-ms-transition: color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out;
+		text-decoration: underline;
+	}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+	p {
+		margin: 0 0 2rem 0;
+	}
+
+	h1 {
+		font-weight: 300;
+		letter-spacing: -0.05em;
+		margin: 0 0 1rem 0;
+		font-size: 3.5rem;
+		line-height: 1.2;
+	}
+
+	@media screen and (max-width: 736px) {
+		h1 {
+			font-size: 2.5rem;
+		}
+
+    }
