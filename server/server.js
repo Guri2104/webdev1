@@ -5,7 +5,7 @@ const mysql = require('mysql');
 const dbCredentials  = mydbCredentials = {
     host: "localhost",
     user: "root",
-    password: "",
+    password: "root",
     database: "webdev",
     insecureAuth: true
 };
